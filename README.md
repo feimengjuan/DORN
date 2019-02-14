@@ -36,6 +36,8 @@ cd $DORN_ROOT
 edit Makefile.config
 build pycaffe
 export PYTHONPATH=$DORN_ROOT/python:$DORN_ROOT/pylayer:$PYTHONPATH
+# depends on your personal path
+export PYTHONPATH=~/Documents/DORN/caffe/python:~/Documents/DORN/caffe/pylayer:$PYTHONPATH
 ```
 3. Download our pretrained models:
 ```
@@ -73,5 +75,26 @@ The evaluation scripts and the groundtruth depth maps for KITTI and NYU Depth v2
 ```
 ### Contact
 Huan Fu: hufu6371@uni.sydney.edu.au
+
+
+### Hailin add
+1. scikit-image error
+refer to [https://github.com/sciunto/scikit-image/blob/ac2dc9997858458fad131ffe7e8337ea3095526e/skimage/util/arraycrop.py](https://github.com/sciunto/scikit-image/blob/ac2dc9997858458fad131ffe7e8337ea3095526e/skimage/util/arraycrop.py)
+
+2. using python2.7
+
+
+3. install other third party libs
+
+4. before run python scripts, do this action.
+```
+export PYTHONPATH=~/Documents/DORN/caffe/python:~/Documents/DORN/caffe/pylayer:$PYTHONPATH
+```
+
+5. run
+```
+python demo_kitti.py --filename=./data/KITTI/demo_01.png --outputroot=./result/KITTI
+```
+
 
 
